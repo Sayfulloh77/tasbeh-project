@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="tasbeh.css" />
+    <title>Learn</title>
+  </head>
+  <body>
+    <div class="tasbih1">Tasbih</div>
+    <div class="tasbih2">Tasbih</div>
+    <div class="main">
+      <!--<ul>
+      <li>
+      -->
+
+      <div id="text"></div>
+      <button id="btn" onclick="getcount()">click</button>
+      <!--
+      </li>
+    </ul>
+  -->
+
+      <h1>0</h1>
+      <button id="decrement" onclick="decrement()"></button>
+    </div>
+    <script>
+      let count = 1
+      const h1 = document.querySelector('h1')
+
+      const ul = document.querySelector('ul')
+      const li = document.createElement('li')
+      const div = document.createElement('div')
+      const btn = document.createElement('button')
+      btn.setAttribute('id', 'btn')
+      btn.setAttribute('onclick', 'getcount()')
+      /*
+      div.innerText = 'Salom Js'
+      btn.innerText = 'click'
+      */
+      li.appendChild(div)
+      li.appendChild(btn)
+      div.setAttribute('id', 'text')
+      ul.appendChild(li)
+      function getcount() {
+        h1.innerHTML = `${count}`
+        count++
+      }
+      function decrement() {
+        count = 0
+        h1.innerHTML = `${count}`
+      }
+    </script>
+  </body>
+</html>
+
+<!--
+make it simple 
+ don't create any elements just take them in js, implement logic
+-->
